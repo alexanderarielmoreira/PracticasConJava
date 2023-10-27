@@ -2,7 +2,17 @@ package guiatp1.iniciado;
 
 public class Ejercicio10 {
 
+    public void separadorLineal() {
+        System.out.println("+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+-+-+-+");
+    };
+
+    public static void separadorSinInstanciacion() {
+        System.out.println("---------------------------------------------------");
+    }
+
     public static void main(String[] args) {
+
+        Ejercicio10 separador = new Ejercicio10();
 
         /* Consigna:
         Acumulador: Se le solicita que guarde en un espacio de memoria la acumulación
@@ -15,7 +25,7 @@ public class Ejercicio10 {
 
         int numeroDos = 6;
 
-        int acumulador = (numeroUno * numeroDos / 1) + (numeroUno * numeroDos / 2) +
+        double acumulador = (numeroUno * numeroDos / 1) + (numeroUno * numeroDos / 2) +
                          (numeroUno * numeroDos / 3) + (numeroUno * numeroDos / 4) +
                          (numeroUno * numeroDos / 5) + (numeroUno * numeroDos / 6) +
                          (numeroUno * numeroDos / 7) + (numeroUno * numeroDos / 8) +
@@ -24,10 +34,28 @@ public class Ejercicio10 {
                          (numeroUno * numeroDos / 13) + (numeroUno * numeroDos / 14) +
                          (numeroUno * numeroDos / 15);
 
+        System.out.println("Acumulador creado manualmente:");
         System.out.println("El resultado del acumulador es: " + acumulador);
+        separador.separadorLineal();
+        Ejercicio10.separadorSinInstanciacion();
 
-        //Buscar la forma de simplificar con un bucle for;
+        // Acumulador implementando un ciclo for:
+
+        double acumuladorConCicloFor = 0.0;
+
+        for(int i = 1; i <= 15; i++) {
+
+            double resultado = (double) (numeroUno * numeroDos) / i;
+
+            acumuladorConCicloFor += resultado;
+
+        };
+
+        System.out.println("Acumulador implementado con un ciclo 'for': ");
+        System.out.println("El resultado de la acumulación implementando un ciclo 'For' es: "
+                + acumuladorConCicloFor);
+        separador.separadorLineal();
+        Ejercicio10.separadorSinInstanciacion();
     }
-
 
 }
