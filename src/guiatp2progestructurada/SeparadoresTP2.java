@@ -1,6 +1,6 @@
 package guiatp2progestructurada;
 
-public class Separadores {
+public class SeparadoresTP2 {
 
     // Método de clase. No se instancia sino que se accede con la
     // notación de punto llamando a la clase;
